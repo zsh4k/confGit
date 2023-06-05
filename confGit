@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Pedir al usuario el nombre de usuario
+read -p "Ingresa tu nombre de usuario para Git: " username
+git config --global user.name "$username"
+
+# Pedir al usuario el correo electrónico
+read -p "Ingresa tu correo electrónico para Git: " email
+git config --global user.email "$email"
+
+
+git config --global color.ui auto
+git config --global core.editor nano
+git config --global init.defaultBranch main
+git config --global push.autoSetupRemote true
+
+
+
+# Mostrar la configuración actual
+git config --list
+
